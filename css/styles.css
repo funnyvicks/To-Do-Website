@@ -1,0 +1,211 @@
+body {
+    background-color: #FFECCC;
+
+}
+
+h1 {
+    color: #FFECCC;
+    font-size: 38px;
+}
+
+h3 {
+    color: #FFECCC;
+    font-size: 25px;
+    margin: 0 0 10px 0;
+}
+
+h4 {
+    color: #FFECCC;
+    font-size: 18px;
+    margin: 15px 0 5px 0;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.container {
+    background-color: #722323;
+    border-style: solid;
+    border-radius: 40px;
+    border-color: #722323;
+    opacity: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    width: 60%;
+    height: 200px;
+    padding: 20px;
+    margin: 50px;
+    height: fit-content;
+    text-align: left;
+}
+
+button {
+    width: 90px;
+    background-color: #722323;
+    color: #FFECCC;
+    padding: 3px;
+}
+
+button.buttonAdd {
+    width: 90px;
+    background-color: #722323;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #943463;
+    border-width: 2px;
+    color: #FFECCC;
+    padding: 3px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #BA487F;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #943463;
+    border-width: 1px;
+}
+
+.buttonRemove {
+    width: 30px;
+    background-color: #722323;
+    border: none;
+    color: #FFECCC;
+    padding: 0px;
+
+    opacity: 0;
+    visibility: hidden; /* initially the button is hidden */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* fade in */
+    transform: translateX(10px); /* make it start from the right */
+}
+
+#taskColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.taskRow {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.taskInput {
+    background-color: #722323;
+    color: rgb(255, 255, 255);
+    /* color: #FFECCC; */
+    font-size: 18px;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+::placeholder {
+    color: #fff2dc;
+}
+
+.taskRow:hover .buttonRemove {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.taskRow.showing {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.buttonEdit {
+    width: 30px;
+    background-color: #722323;
+    border: none;
+    color: #FFECCC;
+    padding: 0px;
+
+    opacity: 0;
+    visibility: hidden; /* initially the button is hidden */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* fade in */
+    transform: translateX(20px); /* make it start from the right */
+}
+
+.taskRow:hover .buttonEdit {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+/* this is for the edit UI */
+.editContainer {
+    background-color: #621d1d;
+    border-style: solid;
+    border-radius: 40px;
+    border-color: #621d1d;
+    opacity: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-self: center;
+    align-items: flex-start;
+    width: 15%;
+    height: fit-content; /* so it fits everything in */
+    padding: 20px;
+    text-align: left;
+    flex: 1;
+}
+
+.editInput {
+    background-color: #621d1d;
+    color: white;
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    flex: none;
+}
+
+.categoryButton {
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    text-align: left;
+}
+
+.categoryButton:hover {
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+.categoryButton:active {
+    font-weight: bold;
+}
+.categoryButton.work {
+    color: lightgreen;
+}
+.categoryButton.personal {
+    color: pink;
+}
+.categoryButton.family {
+    color: lightblue;
+}
+.categoryButton.none {
+    color: #FFECCC;
+}
