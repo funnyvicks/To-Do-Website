@@ -139,9 +139,9 @@ button:hover {
     padding: 0px;
 
     opacity: 0;
-    visibility: hidden; /* initially the button is hidden */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* fade in */
-    transform: translateX(20px); /* make it start from the right */
+    visibility: hidden; 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transform: translateX(20px);
 }
 
 .taskRow:hover .buttonEdit {
@@ -217,16 +217,15 @@ button:hover {
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    border-radius: 50%;      /* makes it a circle */
-    border: 2px solid #722323; /* visible border color */
-    background-color: #FFECCC; /* inside color when unchecked */
-    appearance: none;          /* remove default style */
-    -webkit-appearance: none;  /* for Safari/Chrome */
+    border-radius: 30%;  
+    border: 2px solid #722323; 
+    background-color: #FFECCC; 
+    appearance: none;        
+    -webkit-appearance: none;  
     cursor: pointer;
     position: relative;
 }
 
-/* Small filled circle when checked */
 input[type="checkbox"]:checked::after {
     content: "";
     position: absolute;
